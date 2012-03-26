@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Room Remote</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css" />
+<script src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script> 
+<script>$(document).ready(function(){$(function(){
+$("#on1").click(function () {$.get("/1-on");}); 
+$("#off1").click(function () {$.get("/1-off");});
+$("#on2").click(function () {$.get("/2-on");});
+$("#off2").click(function () {$.get("/2-off");});
+$("#on3").click(function () {$.get("/3-on");});
+$("#off3").click(function () {$.get("/3-off");});});});</script> 
+
+
+
+</head>
+<body>
+<div data-role="page"  id="home">
+<div data-role="header" data-nobackbtn="true">
+    <h1>Room Controls</h1>
+</div>
+<div data-role="content"  data-theme="b">
+    <div data-role="controlgroup" data-type="horizontal">Light 1
+       <input type="button" value="on" id="on1" />
+       <input type="button" value="off" id="off1" />
+
+   </div>
+   <div data-role="controlgroup" data-type="horizontal">Light 2
+       <input type="button" value="on" id="on2" />
+       <input type="button" value="off" id="off2" />
+
+   </div>
+   <div data-role="controlgroup" data-type="horizontal">Heater
+        <input type="button" value="on" id="on3" />
+       <input type="button" value="off" id="off3" />
+
+    </div>
+    </div>
+    </div>
+</body>
+</html>
